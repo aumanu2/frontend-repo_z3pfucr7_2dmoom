@@ -6,7 +6,7 @@ import ResumeContactSection from './components/ResumeContactSection.jsx';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white via-slate-50 to-slate-100 text-slate-900">
+    <div className="min-h-screen bg-[#0b1020] text-slate-100">
       {/* Hero with 3D Spline */}
       <Hero3D />
 
@@ -25,7 +25,7 @@ export default function App() {
         <ResumeContactSection />
       </section>
 
-      <footer className="py-10 text-center text-sm text-slate-500">
+      <footer className="py-10 text-center text-xs text-slate-400/80">
         © {new Date().getFullYear()} — Portfolio of an eCommerce Fulfillment Team Lead
       </footer>
     </div>

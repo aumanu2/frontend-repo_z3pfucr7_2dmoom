@@ -14,32 +14,40 @@ export default function AboutSection() {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto px-6 md:px-10 py-16">
-      <div className="grid md:grid-cols-2 gap-10 items-start">
-        <div>
-          <h2 className="text-2xl md:text-3xl font-bold text-slate-900">About Me</h2>
-          <p className="mt-4 text-slate-700 leading-relaxed">
-            I am an eCommerce Fulfillment Team Lead at Majid Al Futtaim with a strong IT foundation. I specialize in
-            building efficient, technology-enabled operations that scale. My focus areas include streamlining inbound to
-            last-mile workflows, integrating WMS/OMS systems, and collaborating with IT to automate repetitive tasks and
-            set up meaningful dashboards.
-          </p>
-          <p className="mt-3 text-slate-700">
-            I thrive at the intersection of people, process, and platforms — translating operational needs into practical
-            tech solutions that improve throughput and accuracy while keeping teams empowered and customers delighted.
-          </p>
-        </div>
-        <div>
-          <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
-            <h3 className="text-lg font-semibold text-slate-900">Core Skills</h3>
-            <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {skills.map((s) => (
-                <li key={s} className="flex items-start gap-2 text-slate-700">
-                  <CheckCircle2 className="text-blue-600 mt-0.5" size={18} />
-                  <span>{s}</span>
-                </li>
-              ))}
-            </ul>
+    <div className="relative">
+      {/* subtle grid background */}
+      <div className="pointer-events-none absolute inset-0 opacity-[0.07]" aria-hidden>
+        <div className="h-full w-full bg-[radial-gradient(circle_at_1px_1px,#94a3b8_1px,transparent_1px)] [background-size:24px_24px]" />
+      </div>
+
+      <div className="relative max-w-6xl mx-auto px-6 md:px-10 py-20">
+        <div className="grid md:grid-cols-2 gap-10 items-start">
+          <div>
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-100">About Me</h2>
+            <p className="mt-4 text-slate-300 leading-relaxed">
+              I am an eCommerce Fulfillment Team Lead at Majid Al Futtaim with a strong IT foundation. I specialize in
+              building efficient, technology-enabled operations that scale. My focus areas include streamlining inbound to
+              last-mile workflows, integrating WMS/OMS systems, and collaborating with IT to automate repetitive tasks and
+              set up meaningful dashboards.
+            </p>
+            <p className="mt-3 text-slate-300">
+              I thrive at the intersection of people, process, and platforms — translating operational needs into practical
+              tech solutions that improve throughput and accuracy while keeping teams empowered and customers delighted.
+            </p>
+          </div>
+          <div>
+            <div className="relative rounded-2xl p-6 border border-white/10 bg-white/5 backdrop-blur-md shadow-xl">
+              <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-indigo-500/20 via-transparent to-cyan-500/20 pointer-events-none" />
+              <h3 className="relative text-lg font-semibold text-slate-100">Core Skills</h3>
+              <ul className="relative mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {skills.map((s) => (
+                  <li key={s} className="flex items-start gap-2 text-slate-300">
+                    <CheckCircle2 className="text-cyan-300 mt-0.5" size={18} />
+                    <span>{s}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
