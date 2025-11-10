@@ -1,28 +1,33 @@
-import { useState } from 'react'
+import React from 'react';
+import Hero3D from './components/Hero3D.jsx';
+import AboutSection from './components/AboutSection.jsx';
+import ProjectsGallery from './components/ProjectsGallery.jsx';
+import ResumeContactSection from './components/ResumeContactSection.jsx';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
-        </div>
-      </div>
-    </div>
-  )
-}
+    <div className="min-h-screen bg-gradient-to-b from-white via-slate-50 to-slate-100 text-slate-900">
+      {/* Hero with 3D Spline */}
+      <Hero3D />
 
-export default App
+      {/* About */}
+      <section id="about" className="scroll-mt-20">
+        <AboutSection />
+      </section>
+
+      {/* Achievements & Projects */}
+      <section id="projects" className="scroll-mt-20">
+        <ProjectsGallery />
+      </section>
+
+      {/* Resume + Contact */}
+      <section id="resume" className="scroll-mt-20">
+        <ResumeContactSection />
+      </section>
+
+      <footer className="py-10 text-center text-sm text-slate-500">
+        © {new Date().getFullYear()} — Portfolio of an eCommerce Fulfillment Team Lead
+      </footer>
+    </div>
+  );
+}
